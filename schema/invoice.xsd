@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by Hynek Musil (LMC s.r.o.) -->
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://formax.cz/impresso/invoice" 
+	xmlns:s="http://formax.cz/impresso/system" 
+	targetNamespace="http://formax.cz/impresso/invoice" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+	<xs:redefine schemaLocation="invoiceType.xsd">
+		<xs:complexType name="Subject">
+			<xs:complexContent>
+				<xs:extension base="Subject">
+					<xs:attribute name="role" type="Role" use="required"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:redefine>
+	<xs:element name="comodityList">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="ComodityList">
+					<xs:attribute ref="xml:lang" default="cs"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="page">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Page">
+					<xs:sequence>
+						<xs:element name="component" type="InvoiceComponent" maxOccurs="unbounded"/>
+					</xs:sequence>
+					<xs:attribute ref="xml:lang"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="relatedDocs">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="RelatedDocs">
+					<xs:attribute ref="xml:lang" use="required"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="view">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="component" type="InvoiceComponent"/>
+				<xs:element name="composite" type="Composite"/>
+			</xs:choice>
+			<xs:attribute name="title" use="required"/>
+			<xs:attribute ref="xml:lang"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="subject">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Subject">
+					<xs:attribute ref="xml:lang"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="paymentProcess">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="PaymentProcess">
+					<xs:attribute ref="xml:lang"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="summary">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Summary">
+					<xs:attribute ref="xml:lang"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

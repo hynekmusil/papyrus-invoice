@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by Hynek Musil (LMC s.r.o.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="root">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="e0" minOccurs="0"/>
+				<xs:element name="e1"/>
+				<xs:element name="e2" minOccurs="0"/>
+				<xs:element name="e3"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 sp1 (http://www.altova.com) by Hynek Musil (LMC s.r.o.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s="http://formax.cz/impresso/system" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://formax.cz/impresso/system" schemaLocation="../../system/schema/system.xsd"/>
+	<xs:redefine schemaLocation="../../general/schema/generalType.xsd"/>
+	<xs:attributeGroup name="amount">
+		<xs:attribute name="nett" use="required"/>
+		<xs:attribute name="gross"/>
+	</xs:attributeGroup>
+	<xs:simpleType name="InvoiceType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="RelatedDocs"/>
+			<xs:enumeration value="Page"/>
+			<xs:enumeration value="PaymentProcess"/>
+			<xs:enumeration value="SubjectChoosing"/>
+			<xs:enumeration value="ComodityList"/>
+			<xs:enumeration value="Summary"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InvoiceComponentType">
+		<xs:union memberTypes="InvoiceType ComponentType"/>
+	</xs:simpleType>
+	<xs:simpleType name="Role">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="customer"/>
+			<xs:enumeration value="acceptor"/>
+			<xs:enumeration value="contractor"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Customer">
+		<xs:complexContent>
+			<xs:extension base="Subject"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Acceptor">
+		<xs:complexContent>
+			<xs:extension base="Subject"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Contractor">
+		<xs:complexContent>
+			<xs:extension base="Subject"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="InvoiceComponent">
+		<xs:complexContent>
+			<xs:extension base="s:Component">
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="subject">
+						<xs:complexType>
+							<xs:attribute ref="s:id"/>
+							<xs:attribute name="role" type="Role" use="required"/>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+				<xs:attribute name="type" type="InvoiceComponentType"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedDocs">
+		<xs:sequence>
+			<xs:element name="evidence">
+				<xs:annotation>
+					<xs:documentation>Doklad</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attribute name="id" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="contract">
+				<xs:annotation>
+					<xs:documentation>Smlouva</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attribute name="id" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="order">
+				<xs:annotation>
+					<xs:documentation>Objednávka</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attribute name="id" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PaymentProcess">
+		<xs:sequence>
+			<xs:element name="due">
+				<xs:annotation>
+					<xs:documentation>Datum splatnosti</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attribute name="date" type="xs:date" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="order">
+				<xs:annotation>
+					<xs:documentation>Datum objednávky</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attribute name="date" type="xs:date" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="payment">
+				<xs:annotation>
+					<xs:documentation>Forma úhrady</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attribute name="type" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="tax">
+				<xs:annotation>
+					<xs:documentation>Datum zdanitelného plnění / Datum odpočtu.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attribute name="date" type="xs:date" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ComodityList">
+		<xs:sequence>
+			<xs:element name="comodity" type="Comodity" maxOccurs="unbounded"/>
+			<xs:element name="summary" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="one">
+							<xs:complexType>
+								<xs:attributeGroup ref="amount"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="sum">
+							<xs:complexType>
+								<xs:attributeGroup ref="amount"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="discount"/>
+		<xs:attribute name="currencyCode"/>
+	</xs:complexType>
+	<xs:complexType name="Comodity">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="price" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="one">
+							<xs:complexType>
+								<xs:attributeGroup ref="amount"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="sum" minOccurs="0">
+							<xs:complexType>
+								<xs:attributeGroup ref="amount"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="currencyCode" type="CurrencyCode" default="CZK"/>
+					<xs:attribute name="VAT"/>
+					<xs:attribute name="discount"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:ID"/>
+		<xs:attribute name="quantity" type="xs:float"/>
+		<xs:attribute name="unit" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="Summary">
+		<xs:sequence>
+			<xs:element name="rate" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attributeGroup ref="PercentageCalcul"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="discount" minOccurs="0">
+				<xs:complexType>
+					<xs:attributeGroup ref="PercentageCalcul"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="sum">
+				<xs:complexType>
+					<xs:attributeGroup ref="Calcul"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Page">
+		<xs:attribute name="title" type="xs:string" use="required"/>
+		<xs:attribute name="number" type="xs:integer" use="required"/>
+		<xs:attribute name="count" type="xs:integer"/>
+	</xs:complexType>
+	<xs:attributeGroup name="Calcul">
+		<xs:attribute name="base" use="required"/>
+		<xs:attribute name="ratio" use="required"/>
+		<xs:attribute name="sum" use="required"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="PercentageCalcul">
+		<xs:attribute name="percentage" use="required"/>
+		<xs:attributeGroup ref="Calcul"/>
+	</xs:attributeGroup>
+</xs:schema>

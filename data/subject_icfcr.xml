@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subject role="customer" xmlns="http://formax.cz/impresso/invoice" 
+	xmlns:s="http://formax.cz/impresso/system" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://formax.cz/impresso/invoice ../schema/invoice.xsd"
+	xml:lang="cs">
+	<company>
+		<name>ICF ČR</name>
+		<identity ic="27024768"/>
+		<contact>
+			<address>
+				<country code="CZ"/>
+				<city>Praha</city>
+				<cityPart>2 Vinohrady</cityPart>
+				<street>Slezská</street>
+				<number>169/10</number>
+				<zip>12000</zip>
+			</address>
+		</contact>
+		<person>
+			<name surname=""/>
+		</person>
+	</company>
+</subject>

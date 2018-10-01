@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Faktura</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="style/print.css" />
+	</head>
+	<body>
+		<div class="page">
+			<div class="header">
+				<div class="title">Faktura</div>
+				<div class="info">
+					<label>Strana: </label>
+					<span>1</span>
+				</div>
+				<hr/>
+			</div>
+			<div class="content">
+				<div class="relatedDocs">
+					<div class="first">
+						<label>číslo dokladu:</label>
+						<strong contenteditable="true">120</strong>
+					</div>
+					<div>
+						<label>číslo smlouvy:</label>
+						<strong contenteditable="true">120</strong>
+					</div>
+					<div>
+						<label>objednávka:</label>
+						<strong contenteditable="true">120</strong>
+					</div>
+					<p class="clear"></p>
+				</div>
+				<div class="left column">
+					<div id="contractor" class="subject">
+						<img class="right" src="image/emblem.jpg" alt="Emblem dodavatele" />
+						<div class="title">
+							<label>Dodavatel:</label>
+							<strong contenteditable="true">J. Musilová</strong>
+						</div>
+						<div class="address">
+							<h3>PAPYRUS</h3>
+							<select>
+								<option>bogus</option>
+								<option>Meomeo</option>
+							</select>
+							<div>Frýdecká 441</div>
+							<div class="zip">
+								<span>199 00</span>
+								<span>Praha 9 Letňany</span>
+							</div>
+						</div>
+						<!--dl><dt>email:</dt><dd>papyruslet@volny.cz</dd><dt>tel:</dt><dd>(+420)286920690</dd><dt>IČO:</dt><dd>15280357</dd><dt>DIČ:</dt><dd>CZ-525417368</dd><dt>čj.:</dt><dd>4891/92/BU/F/ŽO 24.6.1992</dd><dt>číslo účtu:</dt><dd>KB Praha 8</dd><dd>218044-081/0100</dd></dl-->
+						<table cellspacing="0">
+							<tr>
+								<th>email:</th>
+								<td>papyruslet@volny.cz</td>
+							</tr>
+							<tr>
+								<th>tel:</th>
+								<td>(+420)286 920 690</td>
+							</tr>
+						</table>
+						<table>
+							<tr>
+								<th>IČO:</th>
+								<td>15280357</td>
+							</tr>
+							<tr>
+								<th>DIČ:</th>
+								<td>CZ-525417368</td>
+							</tr>
+						</table>
+						<table>
+							<tr>
+								<th>čj.:</th>
+								<td>4891/92/BU/F/ŽO 24.6.1992</td>
+							</tr>
+							<tr>
+								<th>číslo účtu:</th>
+								<td>KB Praha 8 218044-081/0100</td>
+							</tr>
+						</table>
+					</div>
+					<div id="acceptor" class="subject">
+						<div class="title">
+							<label>Příjemce:</label>
+							<strong>Knihovna</strong>
+						</div>
+						<div class="address">
+							<h3>p.Mikelová</h3>
+						</div>
+					</div>
+				</div>
+				<div class="right column">
+					<div id="customer" class="subject">
+						<div class="title">
+							<label>Odběratel:</label>
+							<strong>p. Králíková</strong>
+						</div>
+						<div class="address">
+							<h3>Městský úřad Letňany</h3>
+							<div>Bechyňská 639</div>
+							<div class="zip">
+								<span>199 00</span>
+								<span>Praha 9 Letňany</span>
+							</div>
+						</div>
+						<table cellspacing="0">
+							<tr>
+								<th>tel:</th>
+								<td>(+420)284 028 121</td>
+							</tr>
+							<tr>
+								<th>fax:</th>
+								<td>(+420)283 923 032</td>
+							</tr>
+							<tr>
+								<th>IČO:</th>
+								<td>231321</td>
+							</tr>
+						</table>
+					</div>
+					<table id="PaymentProcess" cellspacing="0">
+						<tr>
+							<th>Den splatnosti:</th>
+							<td>9.7.2001</td>
+						</tr>
+						<tr>
+							<th>Den odeslání:</th>
+							<td>25.6.2001</td>
+						</tr>
+						<tr>
+							<th>Den splnění:</th>
+							<td>9.7.2001</td>
+						</tr>
+						<tr>
+							<th>Forma úhrady:</th>
+							<td>Převod</td>
+						</tr>
+					</table>
+				</div>
+				<p class="clear"></p>
+				<table class="border comodity" cellspacing="0">
+					<tr>
+						<th>Předmět dodávky</th>
+						<th>DPH</th>
+						<th>Počet MJ</th>
+						<th>Cena bez DPH</th>
+						<th class="last">Celkem s DPH</th>
+					</tr>
+					<tr>
+						<td>100+1 1-12</td>
+						<td>0%</td>
+						<td> 12</td>
+						<td> 28</td>
+						<td class="last"> 336,0 Kč</td>
+					</tr>
+					<tr>
+						<td> ABC 1-12</td>
+						<td> 0%</td>
+						<td> 12</td>
+						<td> 24</td>
+						<td class="last"> 288,0 Kč</td>
+					</tr>
+					<tr>
+						<td> ANNA 1-6</td>
+						<td> 0%</td>
+						<td> 6</td>
+						<td> 65</td>
+						<td class="last"> 390,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Betynka 1-6</td>
+						<td> 0%</td>
+						<td> 6</td>
+						<td> 39</td>
+						<td class="last"> 234,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Burda 1-6</td>
+						<td> 0%</td>
+						<td> 6</td>
+						<td> 85</td>
+						<td class="last"> 510,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Chatař 1-6</td>
+						<td> 0%</td>
+						<td> 6</td>
+						<td> 35</td>
+						<td class="last"> 210,0 Kč</td>
+					</tr>
+					<tr>
+						<td> D TEST 1</td>
+						<td> 0%</td>
+						<td> 1</td>
+						<td> 22</td>
+						<td class="last"> 22,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Domov 1-6</td>
+						<td> 0%</td>
+						<td> 6</td>
+						<td> 45</td>
+						<td class="last"> 270,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Dívka 1-4</td>
+						<td> 0%</td>
+						<td> 4</td>
+						<td> 39</td>
+						<td class="last"> 156,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Dívka 5-6</td>
+						<td> 0%</td>
+						<td> 2</td>
+						<td> 43</td>
+						<td class="last"> 86,0 Kč</td>
+					</tr>
+					<tr>
+						<td> EASY DEUTSCH 13-27</td>
+						<td> 0%</td>
+						<td> 15</td>
+						<td> 42</td>
+						<td class="last"> 630,0 Kč</td>
+					</tr>
+					<tr>
+						<td> EASY DEUTSCH 8-12</td>
+						<td> 0%</td>
+						<td> 5</td>
+						<td> 39</td>
+						<td class="last"> 195,0 Kč</td>
+					</tr>
+					<tr>
+						<td> EASY ENGLISH 30-36</td>
+						<td> 0%</td>
+						<td> 7</td>
+						<td> 39</td>
+						<td class="last"> 273,0 Kč</td>
+					</tr>
+					<tr>
+						<td> EASY ENGLISH 37-54</td>
+						<td> 0%</td>
+						<td> 18</td>
+						<td> 45</td>
+						<td class="last"> 810,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Hatrick 1-6</td>
+						<td> 0%</td>
+						<td> 6</td>
+						<td> 39,9</td>
+						<td class="last"> 239,4 Kč</td>
+					</tr>
+					<tr>
+						<td> Katka spec</td>
+						<td> 0%</td>
+						<td> 1</td>
+						<td> 49</td>
+						<td class="last"> 49,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Knihy 1-22</td>
+						<td> 0%</td>
+						<td> 22</td>
+						<td> 0</td>
+						<td class="last"> 0,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Kulturní přehled 1-6</td>
+						<td> 0%</td>
+						<td> 6</td>
+						<td> 23</td>
+						<td class="last"> 138,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Malíři 43-60 62-67</td>
+						<td> 0%</td>
+						<td> 24</td>
+						<td> 39</td>
+						<td class="last"> 936,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Náš útulný byt</td>
+						<td> 0%</td>
+						<td> 1</td>
+						<td> 32</td>
+						<td class="last"> 32,0 Kč</td>
+					</tr>
+					<tr>
+						<td>Osobní lékař 1-5</td>
+						<td> 0%</td>
+						<td> 5</td>
+						<td> 29,9</td>
+						<td class="last"> 149,5 Kč</td>
+					</tr>
+					<tr>
+						<td> Praktik 1-6</td>
+						<td> 0%</td>
+						<td> 6</td>
+						<td> 29</td>
+						<td class="last"> 174,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Receptář 1-6</td>
+						<td> 0%</td>
+						<td> 6</td>
+						<td> 15,5</td>
+						<td class="last"> 93,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Vlasta 1-24</td>
+						<td> 0%</td>
+						<td> 24</td>
+						<td> 18,9</td>
+						<td class="last"> 453,6 Kč</td>
+					</tr>
+					<tr>
+						<td> Vlasta magazín (máma)</td>
+						<td> 0%</td>
+						<td> 1</td>
+						<td> 45</td>
+						<td class="last"> 45,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Vlasta magazín 1</td>
+						<td> 0%</td>
+						<td> 1</td>
+						<td> 29</td>
+						<td class="last"> 29,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Vlasta seriál 1,3,4,5</td>
+						<td> 0%</td>
+						<td> 4</td>
+						<td> 29</td>
+						<td class="last"> 116,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Zahrádkář 1-6</td>
+						<td> 0%</td>
+						<td> 6</td>
+						<td> 24</td>
+						<td class="last"> 144,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Zdraví 2-4</td>
+						<td> 0%</td>
+						<td> 3</td>
+						<td> 20</td>
+						<td class="last"> 60,0 Kč</td>
+					</tr>
+					<tr>
+						<td> Zdraví 5-6</td>
+						<td> 0%</td>
+						<td> 2</td>
+						<td> 26</td>
+						<td class="last"> 52,0 Kč</td>
+					</tr>
+					<tr>
+						<td> přeplatek</td>
+						<td> 0%</td>
+						<td> -1</td>
+						<td> 8</td>
+						<td class="last"> -8,0 Kč</td>
+					</tr>
+					<tr>
+						<td class="empty">&nbsp;</td>
+						<td class="empty">&nbsp;</td>
+						<th class="sum">Celkem:</th>
+						<td class="sum"> 320,0 Kč</td>
+						<td class="sum last"> 7292,8 Kč</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr class="clear pagebreak" />
+		<div class="page">
+			<div class="header">
+				<div class="info">
+					<label>Strana: </label>
+					<span>1</span>
+				</div>
+				<div class="title">Faktura</div>
+				<hr/>
+			</div>
+			<div class="content">
+				<div class="relatedDocs">
+					<div class="first">
+						<label>číslo dokladu:</label>
+						<strong>120</strong>
+					</div>
+					<div>
+						<label>číslo smlouvy:</label>
+						<strong>120</strong>
+					</div>
+					<div>
+						<label>objednávka:</label>
+						<strong>120</strong>
+					</div>
+					<p class="clear"></p>
+				</div>
+				<table class="border comodity" cellspacing="0">
+					<tr>
+						<th>Předmět dodávky</th>
+						<th>DPH</th>
+						<th>Počet MJ</th>
+						<th>Cena bez DPH</th>
+						<th class="last">Celkem s DPH</th>
+					</tr>
+					<tr>
+						<td> Čtyřlístek 1-5</td>
+						<td> 0%</td>
+						<td> 5</td>
+						<td> 24,9</td>
+						<td class="last"> 124,5 Kč</td>
+					</tr>
+					<tr>
+						<td> Čtyřlístek 6-7</td>
+						<td> 0%</td>
+						<td> 2</td>
+						<td> 27,9</td>
+						<td class="last"> 55,8 Kč</td>
+					</tr>
+					<tr>
+						<td class="empty">&nbsp;</td>
+						<td class="empty">&nbsp;</td>
+						<th class="sum">Celkem:</th>
+						<td class="sum"> 320,0 Kč</td>
+						<td class="sum last"> 7292,8 Kč</td>
+					</tr>
+				</table>
+				<div id="summary">
+					<table class="border" cellspacing="0">
+						<tr>
+							<th>Rekapitulace:</th>
+							<th>Zákld DPH</th>
+							<th>DPH</th>
+							<th class="last">Celkem s DPH</th>
+						</tr>
+						<tr>
+							<th class="coll">Sazba 0%</th>
+							<td> 0,0 Kč</td>
+							<td> 0,0 Kč</td>
+							<td class="last"> 0,0 Kč</td>
+						</tr>
+						<tr>
+							<th class="coll">Sazba5%</th>
+							<td> 320,0 Kč</td>
+							<td> 16,0 Kč</td>
+							<td class="last"> 336,0 Kč</td>
+						</tr>
+						<tr>
+							<th class="coll">Sazba19%</th>
+							<td> 0,0 Kč</td>
+							<td> 0,0 Kč</td>
+							<td class="last"> 0,0 Kč</td>
+						</tr>
+						<tr>
+							<th class="coll sum">Celkem:</th>
+							<td class="sum"> 320,0 Kč</td>
+							<td class="sum"> 16,0 Kč</td>
+							<td class="sum last"> 7292,8 Kč</td>
+						</tr>
+					</table>
+					<span>Razítko a podpis:</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

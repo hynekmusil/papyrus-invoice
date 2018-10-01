@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subject role="contractor" xmlns="http://formax.cz/impresso/invoice" 
+	xmlns:s="http://formax.cz/impresso/system" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://formax.cz/impresso/invoice ../schema/invoice.xsd"
+	xml:lang="cs">
+	<company>
+		<name>PAPYRUS</name>
+		<identity ic="15280357" dic="CZ525417368" cj="4891/92/BU/F/ŽO 24.6.1992"/>
+		<logo src="image/emblem.jpg"/>
+		<contact>
+			<address>
+				<country code="CZ"/>
+				<city>Mníšek pod Brdy</city>
+				<street>Ke škole</street>
+				<number>1389</number>
+				<zip>25210</zip>
+			</address>
+			<phone countryCode="420" number="321621663"/>
+			<mobile countryCode="420" number="605956751"/>
+			<email address="papyruslet@volny.cz"/>
+		</contact>
+		<bankAccount number="218044-081" bankCode="0100">KB Praha 8</bankAccount>
+		<person>
+			<name surname="Musilová" first="J."/>
+		</person>
+	</company>
+</subject>

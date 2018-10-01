@@ -1,0 +1,251 @@
+#editor{
+	background-color: #fff;
+	border: 1px solid red;
+}
+#changedXML{
+	display: none;
+}
+form .relatedDocs{
+	border-bottom: 2px solid Black;
+	width: 714px;
+	clear: both;
+}
+#editor a{
+	display: block;
+	float: left;
+	margin: 5px;
+	padding: 2px;
+}
+form{
+	margin:0;
+	padding: 0;
+}
+body { 
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.page{
+	width:720px;
+}
+.container{
+	float: left;
+}
+.listInv{
+	float:left;
+	border: 1px solid #29166f;
+	padding: 5px 5px 5px 15px;
+	margin-left: 8px;
+	
+}
+.listInv span{
+	font-weight: bold;
+	background-color: #c2e3f9;
+}
+.listInv ul{
+    padding-left:5px;
+}
+.command{
+	list-style-type: none;
+	background-color: #29166f;
+	padding: 5px;
+	font-size: 14px;
+	margin-bottom: 10px; 
+	margin-left: -10px;
+}
+.command a{
+	color: white;
+	font-weight: bold;
+}
+table{
+	font-size:12px;
+}
+.pagebreak{
+	page-break-before: always;
+}
+.header{
+	width: 100%;
+	clear:both;
+}
+.header .title {
+	display: block;
+	font-size:25px;
+	margin: 0px;
+	float: right;
+}
+.header .info {
+	margin-top: 10px;
+	float: left;
+}
+.content {
+	border:2px solid Black;
+	height:950px;
+	margin-bottom: 10px;
+	vertical-align : bottom;
+	clear:both;
+}
+.relatedDocs{
+	border-bottom: 2px solid Black;
+}
+.relatedDocs div{
+	float:left;
+	padding: 3px 10px 3px 10px;
+	width: 30%;
+	border-left: 1px solid black;
+}
+.relatedDocs div.first{
+	border: none;
+}
+.subject .title label{
+	font-size: 1.1em;
+	font-weight: bold;
+	font-style: italic;
+}
+.subject table{
+	margin: 0;
+	padding: 0;
+}
+.subject table th{
+	width: 6em;
+	font-size: 10px;
+}
+.contractor{
+	margin: 10px 0 0 5px;
+}
+.customer, .PaymentProcess{
+	padding: 10px 5px 5px 5px;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.PaymentProcess{
+	width: 100%;
+}
+.PaymentProcess th{
+	text-align: left;
+	width: 10em;
+}
+.acceptor{
+	padding: 5px;
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	margin-bottom: 5px;
+}
+.address{
+	margin: 5px 0 5px 0;
+}
+.address div{
+	margin-left: 4em;
+}
+.address div.zip{
+	margin-left:0;
+}
+.address h3{
+	font-size: 1.15em;
+	margin: 0 0 0 3.5em;
+	padding: 0;
+}
+.subject th{
+	text-align: right;
+	vertical-align: top;
+}
+.comodity{
+	width:100%;
+	text-align: center;
+	margin-top: 5px;
+}
+.border th {
+	border-top: 2px solid Black;
+	border-right: 2px solid Black;
+	border-bottom: 2px solid Black;
+}
+.border th.last {
+	border-right: none;
+}
+th.sum {
+	border-top: 1px solid Black;
+	border-left: 2px solid Black;
+	border-bottom: 2px solid Black;
+}
+ .border td{
+	border-right: 1px solid Black;
+	border-bottom: 1px solid Black;
+	padding: 2px;
+}
+.border td.sum{
+	border-top: 1px solid Black;
+	border-bottom: 2px solid Black;
+}
+td.empty {
+	border-style: none;
+}
+td.last {
+	border-right: none;
+}
+.border th.coll {
+	border-left: none;
+	border-top: none;
+}
+.summary {
+	position: relative;
+	top: 2em;
+	width:100%;
+}
+.summary table{
+	width: 100%;
+}
+.summary td{
+	text-align: right;
+}
+.summary span{
+	position: relative;
+	top: 10px;
+	padding-left: 5px;
+}
+/*.subject dl{
+	display: block;
+	width: 220px;
+	border: 1px solid red;
+	float:left;
+}
+.subject br{
+	clear: both;
+}
+.subject dt{
+	display: block;
+	float: left;
+	clear:left;
+	width: 10px;
+}
+.subject dd{
+	display: block;
+	float: left;
+	clear: right;
+}
+*/
+.column{
+	width: 45%;
+}
+.right{
+	float:right;
+}
+.left{
+	float:left;
+}
+.clear {
+	display: block;
+	clear:both;
+	height: 0;
+	line-height:0;
+	width: 100%;
+	font-size: 0;
+	margin: 0px;
+	padding: 0px;
+}
+hr{
+	font-size: 1px;
+	border: none;
+	border-width: 0px;
+	margin: 0px;
+	padding: 0px;
+	height: 1px;
+}

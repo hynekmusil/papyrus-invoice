@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<summary xml:lang="cs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://formax.cz/impresso/invoice ../schema/invoice.xsd " xmlns="http://formax.cz/impresso/invoice"><rate percentage="21" base="58.8" ratio="280" sum="338.8"/><rate percentage="15" base="1.5" ratio="10" sum="11.5"/><sum base="60.3" ratio="290" sum="350.3"/></summary>

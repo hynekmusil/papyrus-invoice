@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subject role="acceptor" xmlns="http://formax.cz/impresso/invoice" 
+	xmlns:s="http://formax.cz/impresso/system" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://formax.cz/impresso/invoice ../schema/invoice.xsd"
+	xml:lang="cs">
+	<company>
+		<name>Jan Hoynář</name>
+	</company>
+</subject>

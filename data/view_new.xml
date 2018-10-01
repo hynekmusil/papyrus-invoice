@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view xmlns="http://formax.cz/impresso/invoice" xmlns:s="http://formax.cz/impresso/system" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://formax.cz/impresso/invoice ../schema/invoice.xsd" title="Faktura" xml:lang="cs">
+	<component type="Page" s:id="n1"/>
+</view>

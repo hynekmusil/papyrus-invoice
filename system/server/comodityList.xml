@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comodityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://formax.cz/impresso/invoice ../schema/invoice.xsd" 
+	xmlns="http://formax.cz/impresso/invoice" 
+	xmlns:s="http://formax.cz/impresso/system" xml:lang="cs" currencyCode="CZK">
+	<comodity quantity=" 12">
+		<name>100+1 1-12</name>
+		<price VAT="0">
+			<one nett="28"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity="12">
+		<name> ABC 1-12</name>
+		<price VAT=" 0">
+			<one nett=" 24"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity="6">
+		<name> ANNA 1-6</name>
+		<price VAT=" 0">
+			<one nett=" 65"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 6">
+		<name> Betynka 1-6</name>
+		<price VAT=" 0">
+			<one nett=" 39"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 6">
+		<name> Burda 1-6</name>
+		<price VAT=" 0">
+			<one nett=" 85"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 6">
+		<name> Chatař 1-6</name>
+		<price VAT=" 0">
+			<one nett=" 35"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 1">
+		<name> D TEST 1</name>
+		<price VAT=" 0">
+			<one nett=" 22"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 6">
+		<name> Domov 1-6</name>
+		<price VAT=" 0">
+			<one nett=" 45"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 4">
+		<name> Dívka 1-4</name>
+		<price VAT=" 0">
+			<one nett=" 39"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 2">
+		<name> Dívka 5-6</name>
+		<price VAT=" 0">
+			<one nett=" 43"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 15">
+		<name> EASY DEUTSCH 13-27</name>
+		<price VAT=" 0">
+			<one nett=" 42"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 5">
+		<name> EASY DEUTSCH 8-12</name>
+		<price VAT=" 0">
+			<one nett=" 39"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 7">
+		<name> EASY ENGLISH 30-36</name>
+		<price VAT=" 0">
+			<one nett=" 39"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 18">
+		<name> EASY ENGLISH 37-54</name>
+		<price VAT=" 0">
+			<one nett=" 45"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 6">
+		<name> Hatrick 1-6</name>
+		<price VAT=" 0">
+			<one nett=" 39.9"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 1">
+		<name> Katka spec</name>
+		<price VAT=" 0">
+			<one nett=" 49"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 22">
+		<name> Knihy 1-22</name>
+		<price VAT=" 0">
+			<one nett=" 0"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 6">
+		<name> Kulturní přehled 1-6</name>
+		<price VAT=" 0">
+			<one nett=" 23"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 24">
+		<name> Malíři 43-60 62-67</name>
+		<price VAT=" 0">
+			<one nett=" 39"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 1">
+		<name> Náš útulný byt</name>
+		<price VAT=" 0">
+			<one nett=" 32"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 5">
+		<name>Osobní lékař 1-5</name>
+		<price VAT=" 0">
+			<one nett=" 29.9"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 6">
+		<name> Praktik 1-6</name>
+		<price VAT=" 0">
+			<one nett=" 29"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 6">
+		<name> Receptář 1-6</name>
+		<price VAT=" 0">
+			<one nett=" 15.5"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 24">
+		<name> Vlasta 1-24</name>
+		<price VAT=" 0">
+			<one nett=" 18.9"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 1">
+		<name> Vlasta magazín (máma)</name>
+		<price VAT=" 0">
+			<one nett=" 45"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 1">
+		<name> Vlasta magazín 1</name>
+		<price VAT=" 0">
+			<one nett=" 29"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 4">
+		<name> Vlasta seriál 1,3,4,5</name>
+		<price VAT=" 0">
+			<one nett=" 29"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 6">
+		<name> Zahrádkář 1-6</name>
+		<price VAT=" 0">
+			<one nett=" 24"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 3">
+		<name> Zdraví 2-4</name>
+		<price VAT=" 0">
+			<one nett=" 20"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" 2">
+		<name> Zdraví 5-6</name>
+		<price VAT=" 0">
+			<one nett=" 26"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<comodity quantity=" -1">
+		<name> přeplatek</name>
+		<price VAT=" 0">
+			<one nett=" 8"></one>
+			<sum nett="52" gross="52"></sum>
+		</price>
+	</comodity>
+	<summary>
+		<one nett="124"></one>
+		<sum nett="1234" gross="13456.78"></sum>
+	</summary>
+</comodityList>

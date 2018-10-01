@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subject role="customer" xmlns="http://formax.cz/impresso/invoice" 
+	xmlns:s="http://formax.cz/impresso/system" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://formax.cz/impresso/invoice ../schema/invoice.xsd"
+	xml:lang="cs">
+	<company>
+		<name>Polycom spol. s r.o.</name>
+		<identity ic="15273822" dic=" CZ15273822"/>
+		<contact>
+			<address>
+				<country code="CZ"/>
+				<city>Praha</city>
+				<cityPart>9 Letňany</cityPart>
+				<street>Beranových</street>
+				<number>764</number>
+				<zip>19900</zip>
+			</address>
+		</contact>
+		<person>
+			<name surname=""/>
+		</person>
+	</company>
+</subject>

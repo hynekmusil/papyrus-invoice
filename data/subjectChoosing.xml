@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subjectChoosing xmlns="http://formax.cz/impresso/general" 
+	xmlns:s="http://formax.cz/impresso/system" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://formax.cz/impresso/general ../../general/schema/general.xsd" role="customer">
+	<subjectName s:id="MULetnany">Městský úřad Letňany</subjectName>
+	<subjectName s:id="letov">Letov</subjectName>
+	<subjectName s:id="lenka_bacova">Lenka Bačová</subjectName>
+	<subjectName s:id="jihlavan">Jihlavan</subjectName>
+	<subjectName s:id="medcomposites">Medcomposites</subjectName>
+	<subjectName s:id="icfcr">ICF ČR</subjectName>
+	<subjectName s:id="polycom">Polycom</subjectName>
+</subjectChoosing>

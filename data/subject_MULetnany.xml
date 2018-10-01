@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subject role="customer" xmlns="http://formax.cz/impresso/invoice" 
+	xmlns:s="http://formax.cz/impresso/system" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://formax.cz/impresso/invoice ../schema/invoice.xsd"
+	xml:lang="cs">
+	<company>
+		<name>Městský úřad Letňany</name>
+		<identity ic="231321" dic="CZ00231321"/>
+		<contact>
+			<address>
+				<country code="CZ"/>
+				<city>Praha</city>
+				<cityPart>9 Letňany</cityPart>
+				<street>Bechyňská</street>
+				<number>639</number>
+				<zip>19900</zip>
+			</address>
+			<phone countryCode="420" number="284028121"/>
+			<phone countryCode="420" number="283923032" type="fax"/>
+		</contact>
+		<person>
+			<name titleBefore="Ing." surname="Gerhard"/>
+		</person>
+	</company>
+</subject>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 sp1 (http://www.altova.com) by Hynek Musil (LMC s.r.o.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://formax.cz/impresso/system" targetNamespace="http://formax.cz/impresso/system" elementFormDefault="qualified" attributeFormDefault="qualified">
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+	<xs:attribute name="anchor"/>
+	<xs:attribute name="id"/>
+	<xs:complexType name="Component">
+		<xs:sequence minOccurs="0">
+			<xs:element name="data" maxOccurs="unbounded">
+				<xs:complexType mixed="true">
+					<xs:sequence minOccurs="0">
+						<xs:any namespace="##any"/>
+					</xs:sequence>
+					<xs:attribute name="name" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="id"/>
+	</xs:complexType>
+</xs:schema>

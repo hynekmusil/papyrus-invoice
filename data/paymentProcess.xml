@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<paymentProcess xml:lang="cs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://formax.cz/impresso/invoice ../schema/invoice.xsd" xmlns="http://formax.cz/impresso/invoice" xmlns:s="http://formax.cz/impresso/system"><due date="2018-02-25"/><order date="2018-01-25"/><payment type="převod"/><tax date="2018-01-25"/></paymentProcess>

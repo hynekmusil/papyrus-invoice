@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subject role="customer" xmlns="http://formax.cz/impresso/invoice" 
+	xmlns:s="http://formax.cz/impresso/system" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://formax.cz/impresso/invoice ../schema/invoice.xsd"
+	xml:lang="cs">
+	<company>
+		<name>Kadeřnictví</name>
+		<identity ic="73800279" />
+		<contact>
+			<address>
+				<country code="CZ"/>
+				<city>Praha</city>
+				<cityPart>18 Letňany</cityPart>
+				<street>Bechyňská</street>
+				<number>640</number>
+				<zip>19900</zip>
+			</address>
+		</contact>
+		<person>
+			<name surname="Lenka Bačová"/>
+		</person>
+	</company>
+</subject>

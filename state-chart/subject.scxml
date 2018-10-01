@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scxml 
+	xmlns="http://www.w3.org/2005/07/scxml" version="1.0" initialstate="initialFork" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:s="http://formax.cz/system" 
+	xsi:schemaLocation="http://www.w3.org/2005/07/scxml ../schema/scxml.xsd http://formax.cz/system ../schema/system.xsd">
+	<datamodel>
+		<data name="subjectId"/>
+		<data name="component"/>
+	</datamodel>
+	<state id="initialFork">
+		<transition cond="empty(subjectId)" target="selecting"/>
+		<transition cond="isset(subjectId)" target="selected"/>
+	</state>
+	<state id="selecting">
+		<onentry>
+			<assign name="component"><s:component type="SubjectList" xml:lang="cs"/></assign>
+			<send target="showComponent" targettype="x-Command" namelist="component"/>
+		</onentry>
+		<transition event="select" target="selected">
+			<assign name="subjectId" expr="_eventdata.subjectId"/>
+		</transition>
+	</state>
+	<state id="selected">
+		<onentry>
+			<assign name="component"><s:component type="Subject" id="{subjectId}" xml:lang="cs"/></assign>
+			<send target="showComponent" targettype="x-Command" namelist="component"/>
+		</onentry>
+		<transition event="another" target="selecting"/>
+		<transition event="edit" target="selected"/>
+	</state>
+</scxml>

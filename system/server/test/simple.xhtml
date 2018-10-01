@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:scxml="http://www.w3.org/2005/07/scxml"
+	xmlns:nsscxml="http://www.ibm.com/nsscxml"
+	xmlns:ev="http://www.w3.org/2001/xml-events">
+
+<script type="text/javascript">
+<![CDATA[
+// Enable XPconnect for supporting calls to the mozilla extension
+netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+function activate(ev) {
+ // change background color of the activate state
+ ev.target.style.backgroundColor ='#00FF00';
+}
+
+function deactivate(ev) {
+ // change background color of the de-activate state
+ ev.target.style.backgroundColor ='#FFFFFF';
+}
+
+function controlsStatus(ev) {
+  if (ev.type == "EnterInitState") {
+    ev.target.prev.disabled = true;
+    ev.target.next.disabled = false;    
+  } else if (ev.type == "ExitInitState") {
+    ev.target.prev.disabled = false;
+    ev.target.next.disabled = false;    
+  } else if (ev.type == "EnterFinalState") {
+    ev.target.prev.disabled = true;
+    ev.target.next.disabled = true;    
+  }
+}
+
+function load() {
+    // wire events listener with the GUI controls 
+    // and the SCXML controller 
+    buttons = document.getElementById("controls");    
+    controller = document.getElementById("controller");
+    buttons.addEventListener("next", controller, false);
+    buttons.addEventListener("prev", controller, false);
+    
+    buttons.addEventListener("click",
+    function (ev) {
+      domEvent = window.document.createEvent("Events");
+      if (ev.target.id == "next") {
+        domEvent.initEvent("next", true, true);
+        controls.dispatchEvent(domEvent);
+      } else {
+        domEvent.initEvent("prev", true, true);
+        controls.dispatchEvent(domEvent);
+      }
+    } , false);    
+    
+    // Listen to Activate and Deactivate events to change the color of the state
+    states = document.getElementById("states");
+ 	for (var i = 0; states.childNodes && i < states.childNodes.length; i++) {
+	  var state = states.childNodes.item(i);
+	  if (state && state.nodeType == 1) {	  
+        state.addEventListener("Activate", activate, false);
+        state.addEventListener("DeActivate", deactivate, false);
+      }
+	}
+	
+	controls = document.getElementById("controls");
+    controls.addEventListener("EnterInitState", controlsStatus, false);
+    controls.addEventListener("ExitInitState", controlsStatus, false);
+    controls.addEventListener("EnterFinalState", controlsStatus, false);
+}
+
+]]>
+</script>
+
+<head>
+<title>Simple SCXML Example</title>
+</head>
+<scxml:scxml initialstate="one" id="controller" nsscxml:classpath="../lib/">
+	<scxml:state id="one">
+	  <scxml:onentry>
+	    <scxml:send targettype="'DOM'" target="'cell1'" event="Activate" />
+	    <scxml:send targettype="'DOM'" target="'controls'"  event="EnterInitState" />	    
+	  </scxml:onentry>
+	  <scxml:transition event="next" target="two" />
+	  <scxml:onexit>
+	    <scxml:send targettype="'DOM'" target="'cell1'" event="DeActivate" />
+	    <scxml:send targettype="'DOM'" target="'controls'"  event="ExitInitState" />	    
+	  </scxml:onexit>
+	</scxml:state>
+	<scxml:state id="two">
+	  <scxml:onentry>
+	    <scxml:send targettype="'DOM'" target="'cell2'" event="Activate" />
+	  </scxml:onentry>
+	  <scxml:transition event="next" target="three" />
+	  <scxml:transition event="prev" target="one" />
+	  <scxml:onexit>
+	    <scxml:send targettype="'DOM'" target="'cell2'" event="DeActivate" />
+	  </scxml:onexit>
+	</scxml:state>
+	<scxml:state id="three">
+	  <scxml:onentry>
+	    <scxml:send targettype="'DOM'" target="'cell3'" event="Activate" />
+	  </scxml:onentry>
+	  <scxml:transition event="next" target="four" />
+	  <scxml:transition event="prev" target="two" />
+	  <scxml:onexit>
+	    <scxml:send targettype="'DOM'" target="'cell3'" event="DeActivate" />
+	  </scxml:onexit>
+	</scxml:state>
+	<scxml:state id="four" final="true">
+	  <scxml:onentry>
+	    <scxml:send targettype="'DOM'" target="'cell4'" event="Activate" />
+	    <scxml:send targettype="'DOM'" target="'controls'"  event="EnterFinalState" />	    
+	  </scxml:onentry>	
+	</scxml:state>
+</scxml:scxml>
+
+<body onload="load();">
+<p>Click on next or prev bitton to move to a new state.</p>
+<table id="table" border="1" col="4">
+  <tr id="states">
+    <td id="cell1">State one</td>
+    <td id="cell2">State two</td>
+    <td id="cell3">State three</td>
+    <td id="cell4">State four (Final)</td>    
+  </tr>
+</table>
+
+<form id="controls">
+  <!-- next and prev buttons -->
+  <input id="prev" type="button" value="Prev" />
+  <input id="next" type="button" value="Next" />
+</form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page title="Fakura" number="1" 
+	xmlns="http://formax.cz/impresso/invoice" 
+	xmlns:s="http://formax.cz/impresso/system" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://formax.cz/impresso/invoice ../schema/invoice.xsd"
+	xml:lang="cs">
+	<component type="RelatedDocs"/>
+	<component type="Subject" s:id="contractor"/>
+	<component type="Subject" s:id="acceptor"/>
+	<component type="Subject" s:id="customer"/>
+	<component type="PaymentProcess"/>
+	<component type="ComodityList" s:pgRange="1..33"/>
+</page>

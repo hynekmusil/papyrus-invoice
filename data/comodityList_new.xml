@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comodityList xml:lang="cs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://formax.cz/impresso/invoice ../schema/invoice.xsd" xmlns="http://formax.cz/impresso/invoice" xmlns:s="http://formax.cz/impresso/system" currencyCode="CZK">
+	<comodity id="-" quantity=" 12">
+		<name>-</name>
+		<price VAT="0">
+			<one nett="0" gross="0"/>
+			<sum nett="0" gross="0"/>
+		</price>
+	</comodity>
+</comodityList>
